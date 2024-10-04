@@ -12,25 +12,21 @@ const Card = ({ text, bgColor = "bg-secondary", desc="" }) => {
     setIsFlipped(false);
   };
   return (
-    <div
+<div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="min-h-60 w-[90%] mx-auto md:w-1/3 cursor-pointer relative"
+      className="w-[90%] mx-auto md:w-1/3 cursor-pointer relative"
       style={{ perspective: "1000px" }}
     >
       <motion.div
-        style={{
-          width: "100%",
-          height: "100%",
-          position: "relative",
-          transformStyle: "preserve-3d",
-        }}
+        className="w-full aspect-square relative"
+        style={{ transformStyle: "preserve-3d" }}
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, type: "spring" }}
       >
         <div
-          className={`rounded-[10px] absolute ${bgColor} text-center px-3 text-white flex items-center justify-center font-[900] text-[32px] leading-[48px] tracking-[10%] h-full w-full`}
+          className={`rounded-[10px] absolute ${bgColor} text-center p-4 text-white flex items-center justify-center h-full w-full overflow-hidden`}
           style={{
             textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             backgroundOrigin: "border-box",
@@ -38,10 +34,12 @@ const Card = ({ text, bgColor = "bg-secondary", desc="" }) => {
             backfaceVisibility: "hidden",
           }}
         >
-          {text}
+          <h2 className="font-black text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl tracking-wide break-words">
+            {text}
+          </h2>
         </div>
         <div
-          className={`rounded-[10px] absolute ${bgColor} text-center px-3 text-white w-full h-full flex items-center justify-center font-[900] text-[32px] leading-[48px] tracking-[10%]`}
+          className={`rounded-[10px] absolute ${bgColor} text-center p-4 text-white w-full h-full flex items-center justify-center overflow-hidden`}
           style={{
             textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             backgroundOrigin: "border-box",
@@ -50,7 +48,9 @@ const Card = ({ text, bgColor = "bg-secondary", desc="" }) => {
             transform: "rotateY(180deg)",
           }}
         >
-          {desc}
+          <p className="font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wide break-words overflow-auto max-h-full">
+            {desc}
+          </p>
         </div>
       </motion.div>
     </div>
