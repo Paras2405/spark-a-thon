@@ -38,7 +38,7 @@ export default function Domains() {
           desc="The Smart Systems domain focuses on creating devices where hardware and software collaborate in real-time for optimal performance and efficiency. Examples include smart home devices, health monitors, and automated irrigation systems. Participants are encouraged to design innovative, scalable solutions that highlight their technical expertise and entrepreneurial spirit."
         />
         <Card
-          text="POWER SYSTEMS / RENEWABLE ENERGY SYSTEMS / SMART GRID"
+          text="OPEN INNOVATIONS"
           desc="The Power Systems domain focuses on creating sustainable energy solutions for power generation, distribution, and storage. Projects aim to solve real-world challenges, like designing smart grids or renewable energy systems (e.g., solar or wind) for remote areas. The goal is to develop scalable ideas that can become marketable products or businesses."
           bgColor="bg-[#FF5055]"
           textColor="text-gray-800"
